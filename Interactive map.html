@@ -6,8 +6,9 @@
 </head>
 <body>
 	<h1>Interactive Map</h1>
-<p>The below is an interactive map of the G18 data set and its depiction of where these individuals reside.</p>
-
+	<div style="position: relative">
+                <p style="position: fixed; top: -13%; left:-16%; width:100%; text-align: center"> The below is an interactive map of the G18 data set and its depiction of where these individuals reside.
+            	</p>
 <head>
     <meta charset='utf-8' />
     <title></title>
@@ -17,9 +18,8 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #map { position:fixed; top:30%; bottom:10%; left:-47%; width:130%; }
     </style>
-
 </head>
 <body>
 
@@ -30,10 +30,10 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zaHVhY29hZHkiLCJhIjoiY2o2dm5kYzYwMHdtZjJ4d
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
-    center: [151, -33.9],
+    center: [151.7, -33.8],
     zoom: 10,
-    pitch: 40,
-    bearing: 20
+    pitch: 50,
+    bearing: -30
 });
 
 map.on('load', function() {
@@ -63,7 +63,7 @@ map.on('load', function() {
                 'property': '16 Inc',
                 'stops': [
                     [0, 0],
-                    [2300, 2000]
+                    [2300, 1800]
                     ]
             },
             // Make extrusions slightly opaque for see through indoor walls.
@@ -73,11 +73,10 @@ map.on('load', function() {
 });
 </script>
 
-</body>
 
 <a href="file:///C:/Users/Chris/Desktop/Website/Website%20script.html#">Home</a>
 <br><br>
 <a href="file:///C:/Users/Chris/Desktop/Website/Data_analysis.html">Back</a>
 
 </body>
-</html>
+</html>	
